@@ -42,6 +42,7 @@ Imagine that your job is to provide tests for the following endpoints:
     ```
 
 -	GET /pet/findByStatus?status={available,pending,sold} will return results like the following
+	
 	```
    	[{
       "id":1507556953502,
@@ -67,6 +68,7 @@ Imagine that your job is to provide tests for the following endpoints:
 ```
 
 -	GET /pet/{petId} Find pet by ID and the response is looking like the following payload
+	
 	```
     {
        "id":1507556867977,
@@ -97,6 +99,7 @@ PS: Full documentation can be found at [wiremock.org](http://wiremock.org/ "wire
 
 How it is structured?
 ---------------------
+
 ```
 mock
 ├── README.md
@@ -143,22 +146,27 @@ mvn jetty:run
 ```
 
 if all good without error, start browser
+
 ```
 http://localhost:8008/__admin/
 ```
 
 Describe all available endpoints.
 For example, to list all available annimals you can perform GET request were status is set to availavle all you need to do is (using postman, jmeter or whatever tool you want) you perform
+
 ```
 GET http://localhost:8008/v2/pet/findByStatus?status=available
 ```
+
 will return all available pets set in `__files/available_status.json` file.
 To stop server run
+
 ```
 mvn jetty:stop
 ```
 
 the list of endpoint are:
+
 ```
 GET http://localhost:8008/v2/pet/findByStatus?status=available
 GET http://localhost:8008/v2/pet/findByStatus?status=pending
