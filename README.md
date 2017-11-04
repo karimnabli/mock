@@ -19,8 +19,8 @@ A quick win is to deploy a simulator that will provide for you interactions as t
 The current project assume that the dev team(s) is/are working hard to deliver api for [petsore](http://petstore.swagger.io/)
 
 Imagine that your job is to provide tests for the following endpoints:
--	POST /pet to create a new pet with the following body
-	```
+- POST /pet to create a new pet with the following body
+```
     {
       "id": 0,
       "category": {
@@ -39,12 +39,12 @@ Imagine that your job is to provide tests for the following endpoints:
       ],
       "status": "available"
 	}
-    ```
+```
 
--	GET /pet/findByStatus?status={available,pending,sold} will return results like the following
+- GET /pet/findByStatus?status={available,pending,sold} will return results like the following
 	
-	```
-   	[{
+```
+[{
       "id":1507556953502,
       "category":{
          "id":12,
@@ -64,13 +64,13 @@ Imagine that your job is to provide tests for the following endpoints:
          }
       ],
       "status":"available"
-   }]
+}]
 ```
 
--	GET /pet/{petId} Find pet by ID and the response is looking like the following payload
+- GET /pet/{petId} Find pet by ID and the response is looking like the following payload
 	
-	```
-    {
+```
+{
        "id":1507556867977,
        "category":{
           "id":12,
@@ -90,8 +90,8 @@ Imagine that your job is to provide tests for the following endpoints:
           }
        ],
        "status":"available"
-	}
-	```
+}
+```
 
 To answer the question what is about? this is simply a try to provide an example of mocked server that provide such answers.
 
@@ -140,6 +140,7 @@ mock
 `mappings` contain the request structure.
 
 to start the mock server:
+
 ```
 mvn clean install
 mvn jetty:run
