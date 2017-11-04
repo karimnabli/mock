@@ -1,0 +1,13 @@
+{        
+    "request": {                                    
+        "method": "GET",                        
+        "urlPath": "/v2/pet/1507556867977"
+    },                                      
+    "response": {                                   
+        "status": 200,                          
+        "bodyFileName": "get_pet.json",
+        "headers": {
+            "Content-Type": "application/xml"
+        }
+    }                                               
+}

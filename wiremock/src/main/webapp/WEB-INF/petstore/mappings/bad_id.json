@@ -1,0 +1,13 @@
+{        
+    "request": {                                    
+        "method": "GET",                        
+        "urlPath": "/v2/pet/1-123"
+    },                                      
+    "response": {                                   
+        "status": 404,                          
+        "bodyFileName": "bad_id.json",
+        "headers": {
+            "Content-Type": "application/json"
+        }
+    }                                               
+}

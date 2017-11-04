@@ -1,0 +1,13 @@
+{        
+    "request": {                                    
+        "method": "GET",                        
+        "urlPath": "/v2/pet/7357550131108011980"
+    },                                      
+    "response": {                                   
+        "status": 404,                          
+        "bodyFileName": "pet_does_not_exist.json",
+        "headers": {
+            "Content-Type": "application/json"
+        }
+    }                                               
+}

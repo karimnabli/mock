@@ -1,0 +1,18 @@
+{        
+    "request": {                                    
+        "method": "POST",                        
+        "urlPath": "/v2/pet",
+        "bodyPatterns": [
+        {
+            "equalToJson": "{\"id\": 0,\"category\": \"alpha\",\"name\": \"\",\"tags\": [{\"id\": \"abc\",\"name\": \"string\"}],\"status\": \"available\"}"
+        }
+      ]
+    },                                      
+    "response": {                                   
+        "status": 500,                          
+        "bodyFileName": "create_pet_badBody.json",
+        "headers": {
+      	"Content-Type": "application/json"
+    	}
+    }                                               
+}
