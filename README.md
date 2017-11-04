@@ -14,7 +14,7 @@ Thanks to [Tom Akehurst](http://www.tomakehurst.com/) for the shared project tha
 
 What is about?
 ------------
-Imagine that you are a qa, working in company and whish to deliver tests int TDD style. This became quickly aproblematic as it is very difficult to check if your tests are checking the correct information(s) or not.
+Imagine that you are a qa, working in company and wish to deliver tests int TDD style. This became quickly aproblematic as it is very difficult to check if your tests are checking the correct information(s) or not.
 A quick win is to deploy a simulator that will provide for you interactions as they are supposed to be delivered by dev team.
 The current project assume that the dev team(s) is/are working hard to deliver api for [petsore](http://petstore.swagger.io/)
 
