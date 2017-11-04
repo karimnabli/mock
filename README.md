@@ -20,7 +20,7 @@ The current project assume that the dev team(s) is/are working hard to deliver a
 
 Imagine that your job is to provide tests for the following endpoints:
 -	POST /pet to create a new pet with the following body
-	```json
+	```
     {
       "id": 0,
       "category": {
@@ -39,10 +39,10 @@ Imagine that your job is to provide tests for the following endpoints:
       ],
       "status": "available"
 	}
-	```
+    ```
 
 -	GET /pet/findByStatus?status={available,pending,sold} will return results like the following
-	```json
+	```
    	[{
       "id":1507556953502,
       "category":{
@@ -64,10 +64,10 @@ Imagine that your job is to provide tests for the following endpoints:
       ],
       "status":"available"
    }]
-   ```
+```
 
--	GET /pet/{petId} Find pet by ID and the response is looking like the following payload:
-	```json
+-	GET /pet/{petId} Find pet by ID and the response is looking like the following payload
+	```
     {
        "id":1507556867977,
        "category":{
@@ -132,30 +132,34 @@ mock
                     │       └── sold_status.json
                     └── web.xml
 ```
+
 `__files` contains the request responses.
 `mappings` contain the request structure.
 
 to start the mock server:
-```maven
+```
 mvn clean install
 mvn jetty:run
 ```
+
 if all good without error, start browser
-```http
+```
 http://localhost:8008/__admin/
 ```
+
 Describe all available endpoints.
 For example, to list all available annimals you can perform GET request were status is set to availavle all you need to do is (using postman, jmeter or whatever tool you want) you perform
-```http
+```
 GET http://localhost:8008/v2/pet/findByStatus?status=available
 ```
 will return all available pets set in `__files/available_status.json` file.
 To stop server run
-```maven
+```
 mvn jetty:stop
 ```
+
 the list of endpoint are:
-```http
+```
 GET http://localhost:8008/v2/pet/findByStatus?status=available
 GET http://localhost:8008/v2/pet/findByStatus?status=pending
 GET http://localhost:8008/v2/pet/findByStatus?status=sold
@@ -164,6 +168,7 @@ GET http://localhost:8008/v2/pet/1507556867977 -->good id
 GET http://localhost:8008/v2/pet/7357550131108011980 --> pet does not exist
 POST http://localhost:8008/v2/pet --> With body request as it is defined in the [mappings/{create_pet_badBody.json, create_pet.json, create_pet1.json, create_pet2.json}]
 ```
+
 the request response as it has been mentioned previousley are referenced in the `__files/*` and specified in the `mappinngs/*` files.
 
 Conclusion
