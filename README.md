@@ -39,7 +39,8 @@ Imagine that your job is to provide tests for the following endpoints:
       ],
       "status": "available"
 	}
-```
+	```
+
 -	GET /pet/findByStatus?status={available,pending,sold} will return results like the following
 	```json
    	[{
@@ -63,7 +64,8 @@ Imagine that your job is to provide tests for the following endpoints:
       ],
       "status":"available"
    }]
-   ````
+   ```
+
 -	GET /pet/{petId} Find pet by ID and the response is looking like the following payload:
 	```json
     {
@@ -88,6 +90,7 @@ Imagine that your job is to provide tests for the following endpoints:
        "status":"available"
 	}
 	```
+
 To answer the question what is about? this is simply a try to provide an example of mocked server that provide such answers.
 
 PS: Full documentation can be found at [wiremock.org](http://wiremock.org/ "wiremock.org")
